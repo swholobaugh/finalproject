@@ -1,6 +1,6 @@
 <template>
   <div>
-      <h1 class="p-2">Login</h1>
+      <h1 class="p-2 text-center text-4xl">Login</h1>
   </div>
 </template>
 
