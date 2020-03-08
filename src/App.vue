@@ -1,5 +1,5 @@
 <template>
-  <div class="bg-gray-700 min-h-screen text-white">
+  <div class="bg-gray-800 min-h-screen">
     <NavBar />
     <router-view/>
   </div>      
@@ -15,3 +15,5 @@ export default {
   }
 }
 </script>
+
+<style lang="scss" scoped></style>
