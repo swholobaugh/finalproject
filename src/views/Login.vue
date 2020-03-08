@@ -1,16 +1,18 @@
 <template>
   <div>
-    <h1>Journal</h1>
+      <h1>Login</h1>
   </div>
 </template>
 
 <script>
 export default {
-    name: 'Journal',
+    name: 'Login',
     components: {
 
     }
 }
 </script>
 
-<style></style>
+<style>
+
+</style>
