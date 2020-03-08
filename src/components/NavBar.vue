@@ -1,6 +1,7 @@
 <template>
   <nav>
-      <h1>NavBar</h1>
+      <router-link to="/" class="font-semibold text-xl tracking-tight">Home</router-link>
+      <router-link to="/Journal" class="font-semibold text-xl tracking-tight">Journal</router-link>
   </nav>
 </template>
 
