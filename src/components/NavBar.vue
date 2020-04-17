@@ -1,12 +1,17 @@
 <template>
-  <nav class="bg-gray-500 h-24 border-b-2 border-gray-600">
-      <router-link to="/" class="font-semibold text-2xl p-2">
-        <button class="hover:bg-gray-800 hover:text-white">Home</button>
-      </router-link>
-      <router-link to="/Login" class="font-semibold text-2xl p-4">
-        <button class="hover:bg-gray-800 hover:text-white">Login</button>
-      </router-link>
-  </nav>
+  <v-toolbar app dark>
+    <v-toolbar-title>
+      <span class="font-weight-light">trade</span>
+      <span class="font-weight-regular">Portal</span>
+    </v-toolbar-title>
+
+    <v-spacer />
+    <v-card>
+      <v-btn to="/home">Home</v-btn>
+      <v-btn to="/journal">Journal</v-btn>
+      <v-btn to="/login">Login</v-btn>
+    </v-card>
+  </v-toolbar>
 </template>
 
 <script>

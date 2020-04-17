@@ -1,7 +1,5 @@
 <template>
-  <div>
-    <h1 class="p-2 text-center text-4xl">Home</h1>
-  </div>
+  <v-spacer/>
 </template>
 
 <script>
