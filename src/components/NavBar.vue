@@ -3,9 +3,6 @@
       <router-link to="/" class="font-semibold text-2xl p-2">
         <button class="hover:bg-gray-800 hover:text-white">Home</button>
       </router-link>
-      <router-link to="/Journal" class="font-semibold text-2xl p-4">
-        <button class="hover:bg-gray-800 hover:text-white">Journal</button>
-      </router-link>
       <router-link to="/Login" class="font-semibold text-2xl p-4">
         <button class="hover:bg-gray-800 hover:text-white">Login</button>
       </router-link>
