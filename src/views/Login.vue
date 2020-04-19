@@ -1,5 +1,7 @@
 <template>
-  <div id="firebaseui-auth-container" class="mt-8"></div>
+  <v-container>
+    <div id="firebaseui-auth-container" class="mt-8"></div>
+  </v-container>
 </template>
 
 <script>

@@ -13,18 +13,20 @@ const routes = [
     component: Home
   },
   {
-    path: '/Login',
+    path: '/login',
     name: 'Login',
     component: Login
   },
   {
-    path: '/Journal',
+    path: '/journal',
     name: 'Journal',
     component: Journal
   }
 ]
 
 const router = new VueRouter({
+  mode: 'history',
+  base: process.env.BASE_URL,
   routes
 })
 

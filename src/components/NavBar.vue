@@ -1,23 +1,60 @@
 <template>
-  <v-toolbar app dark>
+  <v-toolbar app>
     <v-toolbar-title>
       <span class="font-weight-light">trade</span>
       <span class="font-weight-regular">Portal</span>
     </v-toolbar-title>
-
     <v-spacer />
-    <v-card>
-      <v-btn to="/home">Home</v-btn>
-      <v-btn to="/journal">Journal</v-btn>
-      <v-btn to="/login">Login</v-btn>
-    </v-card>
+    <v-btn :to="{ name: 'Home' }">Home</v-btn>
+    <v-btn :to="{ name: 'Journal' }">Journal</v-btn>
+    <v-btn :to="{ name: 'Login' }">Login</v-btn> -->
+    <v-btn v-if="!user" to="/login" text>
+      <span class="mr-2">Login</span>
+    </v-btn>
+    <div v-else>
+      <v-menu bottom left>
+        <template v-slot:activator="{ on }">
+          <v-btn text v-on="on">
+            <span class="mr-2">{{ user.name }}</span>
+            <v-icon>mdi-menu-down</v-icon>
+          </v-btn>
+        </template>
+
+        <v-list>
+          <v-list-item>
+            <v-list-item-title>
+              <v-btn block text @click="showDialog()">Add Post</v-btn>
+            </v-list-item-title>
+          </v-list-item>
+          <v-list-item>
+            <v-list-item-title>
+              <v-btn block text @click="logOut">Logout</v-btn>
+            </v-list-item-title>
+          </v-list-item>
+        </v-list>
+      </v-menu>
+    </div>
   </v-toolbar>
 </template>
 
 <script>
+import {mapGetters, mapActions} from 'vuex'
+
 export default {
-    name: 'NavBar'
+    name: 'NavBar',
+    computed: {
+      ...mapGetters({
+        user: 'getUser',
+      }),
+    },
+    methods: {
+      logOut() {
+        this.$firebase.auth().signOut()
+        this.setUser('')
+        this.setIdToken('')
+        this.$router.push('/')
+      },
+      ...mapActions(['setUser', 'setIdToken']),
+    }
 }
 </script>
-
-<style lang="scss" scoped></style>

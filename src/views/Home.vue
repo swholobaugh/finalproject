@@ -1,5 +1,6 @@
 <template>
-  <v-spacer/>
+  <v-container>
+  </v-container>
 </template>
 
 <script>

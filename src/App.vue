@@ -1,10 +1,11 @@
 <template>
   <v-app>
-    <v-card>
-      <v-card-title>
-        <NavBar />
-      </v-card-title>
-    </v-card>
+    <v-app-bar app dark>
+      <NavBar />
+    </v-app-bar>
+    <v-content>
+      <router-view/>
+    </v-content>
   </v-app>
 </template>
 

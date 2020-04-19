@@ -1,33 +1,42 @@
 <template>
-  <div class="flex">
-      <label class="flex-1">
-          <div class="text-black text-center">Date</div>
-      </label>
-      <label class="flex-1">
-          <div class="text-black text-center">Symbol</div>
-      </label>
-      <label class="flex-1">
-          <div class="text-black text-center">Open Price</div>
-      </label>
-      <label class="flex-1">
-          <div class="text-black text-center">Closing Price</div>
-      </label>
-      <label class="flex-1">
-          <div class="text-black text-center">P/L</div>
-      </label>
-      <label class="flex-1">
-          <div class="text-black text-center">Balance</div>
-      </label>
-      <label class="flex-1">
-          <div class="text-black text-center">Comment</div>
-          <input v-model="comment" class="form-input mt-1 w-56" placeholder="Enter comment..." />
-      </label>
-    </div>
+    <v-data-table
+        :headers="headers"
+        :items="trades"
+        :items-perpage="10"
+        class="elevation-1"
+    ></v-data-table>
 </template>
 
 <script>
 export default {
-    name: 'JournalForm'
+    name: 'JournalForm',
+    data () {
+        return {
+            headers: [
+                {
+                    text: 'Date',
+                    align: 'start',
+                    sortable: 'true',
+                    value: 'date'
+                },
+                { text: 'Symbol', value: 'symbol' },
+                { text: 'Buy Price', value: 'buyprice' },
+                { text: 'Sell Price', value: 'sellprice' },
+                { text: 'Profit/Loss', value: 'profitloss' },
+                { text: 'Closing Date', value: 'closingdate' },
+            ],
+            trades: [
+                {
+                    date: '',
+                    symbol: '',
+                    buyprice: '',
+                    sellprice: '',
+                    profitloss: '',
+                    closingdate: ''
+                },
+            ]
+        }
+    }
 }
 </script>
 
