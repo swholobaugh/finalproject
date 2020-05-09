@@ -3,10 +3,10 @@ import Vuex from 'vuex'
 
 Vue.use(Vuex)
 
-export default new Vuex.Store({
+const store = new Vuex.Store({
   state: {
     user: '',
-    idToken: ''
+    idToken: '',
   },
   getters: {
     getUser: state => state.user,
@@ -21,3 +21,5 @@ export default new Vuex.Store({
     setIdToken: ({ commit }, idToken) => commit('settingIdToken', idToken),
   },
 })
+
+export default store;
