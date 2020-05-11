@@ -5,6 +5,7 @@ import store from './store'
 import vuetify from './plugins/vuetify'
 import './plugins/firebase'
 import './plugins/axios'
+import '@fortawesome/fontawesome-free/css/all.css'
 
 Vue.config.productionTip = false;
 

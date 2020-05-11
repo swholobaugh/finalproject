@@ -1,7 +1,13 @@
 <template>
+    <v-content>
+    <v-row justify="center">
+        <div><h1>Journal</h1></div>
+    </v-row>
+    <v-spacer/>
     <v-container>
         <JournalForm/>
     </v-container>
+    </v-content>
 </template>
 
 <script>
@@ -15,6 +21,4 @@ export default {
 }
 </script>
 
-<style>
-
-</style>
+<style></style>
